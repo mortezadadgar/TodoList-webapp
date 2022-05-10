@@ -1,0 +1,169 @@
+body {
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px 30px 10px;
+}
+
+button {
+    border: none;
+}
+
+.bold-text {
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.name-title {
+    text-decoration: none;
+    color: #000;
+}
+
+.name-do {
+    font-weight: bold;
+}
+
+.search {
+    position: relative;
+}
+
+.search-box {
+    outline: none;
+    padding: 2px 5px;
+    border: 3px solid #cccccc;
+}
+
+.search-icon {
+    font-family: "Font Awesome 6 Free";
+    position: absolute;
+    right: 6px;
+    bottom: 3px;
+}
+
+.search-box:focus {
+    border: 3px solid #37c;
+}
+
+.login {
+    text-decoration: none;
+    color: #fff;
+    background-color: #37c;
+    padding: 6px 15px;
+}
+
+/* FIXME: Algin them */
+.logout-icon {
+    font-family: "Font Awesome 6 Free";
+    text-decoration: none;
+    color: #fff;
+    background-color: #ff3434;
+    padding: 7px 10px;
+    cursor: pointer;
+}
+
+.logout-form {
+    display: inline;
+}
+
+.todos {
+    width: 40%;
+    text-align: center;
+    list-style: none;
+    padding-left: 0px;
+    margin: 0 auto;
+}
+
+.todo {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    margin: 15px 0;
+    border: 3px solid #ccc;
+    /* TODO: box-shadow? */
+}
+
+.todo form {
+    padding: 0px;
+    margin: 0px;
+    border: 3px solid #000;
+}
+
+.todo-add {
+    background-color: #00ce00;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    padding: 5px 15px;
+}
+
+.todo-input {
+    outline: none;
+    margin: 5px;
+    padding: 2px 5px;
+    border: 3px solid #ccc;
+}
+
+.todo-input:focus {
+    border: 3px solid #37c;
+}
+
+.todo-check {
+    margin: 0px 10px 0px 10px;
+}
+
+.todo-edit {
+    background-color: #6e7f80;
+    color: #fff;
+    padding: 3px 10px;
+    margin-left: auto; /* HACK: this moves todo-remove to left as well?! */
+    margin-right: 10px;
+}
+
+.todo-remove {
+    background-color: #ff4d4d;
+    color: #fff;
+    padding: 3px 10px;
+    margin-right: 10px;
+}
+
+.login-form {
+    width: 220px; /* HACK: fix asap */
+    margin: 0px auto;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.form-user,
+.form-pass {
+    outline: none;
+    display: block;
+    padding: 5px;
+    border: 3px solid #cccccc;
+    margin-bottom: 10px;
+}
+
+.form-user:focus,
+.form-pass:focus {
+    border: 3px solid #37c;
+}
+
+.form-button {
+    padding: 5px;
+    /* float: right; */
+    position: absolute;
+    bottom: 10;
+    right: 0;
+}
+
+footer {
+    background-color: #cccccc;
+    text-align: center;
+    padding: 10px;
+}
+
+/* TODO: remove and edit icon inside todo items */
+/* TODO: center todos border */
