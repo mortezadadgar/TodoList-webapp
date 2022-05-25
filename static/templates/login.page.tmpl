@@ -1,0 +1,16 @@
+{{ template "base" . }}
+{{ define "title" }}Todo List - Login{{ end }}
+{{ define "scripts" }}
+    <script src="/static/js/header.js"></script>
+{{ end }}
+
+{{ define "content" }}
+    <form class="form" action="/user/login" method="post">
+        <label class="form-user-label">Email:</label>
+        <input class="js-form-user" name="username" />
+        <label class="form-pass-label">Password:</label>
+        <input class="js-form-pass" name="password" type="password" />
+        <button class="js-form-button" type="submit">Login</button>
+        <p>Doesn't have an account? <a href="/user/login">Login</a></p>
+    </form>
+{{ end }}

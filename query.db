@@ -1,0 +1,14 @@
+CREATE TABLE users (
+	id                serial    primary key,
+	username          text      NOT NULL,
+	hashed_password   text      NOT NULL,
+	created_date      timestamp NOT NULL
+);
+
+CREATE TABLE todos (
+	id           serial    primary key,
+	user_id      integer   references users(id),
+	body         text      NOT NULL,
+	is_done      boolean   NOT NULL,
+	created_date timestamp NOT NULL
+);

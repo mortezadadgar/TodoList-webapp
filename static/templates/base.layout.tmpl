@@ -1,0 +1,78 @@
+<!-- TODO: find a better way to fetch icons and fonts(cloudflare, gstatic connections...) -->
+{{ define "base" }}
+    <!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <title>{{ template "title" . }}</title>
+            <meta charset="UTF-8" />
+            <meta
+                name="viewport"
+                content="width=device-width, initial-scale=1"
+            />
+            <link href="/static/styles/main.css" rel="stylesheet" />
+            <script
+                src="https://kit.fontawesome.com/3718b58796.js"
+                crossorigin="anonymous"
+            ></script>
+
+            <link rel="preconnect" href="https://fonts.googleapis.com" />
+            <link
+                rel="preconnect"
+                href="https://fonts.gstatic.com"
+                crossorigin
+            />
+            <link
+                href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap"
+                rel="stylesheet"
+            />
+        </head>
+        <body>
+            <header class="header">
+                <div class="title">
+                    <a class="title-text" href="/">#ToDoList</a>
+                </div>
+                <div class="searchbox">
+                    <input
+                        class="search-box"
+                        placeholder="Search..."
+                        type="search"
+                    />
+                </div>
+                <div class="nav">
+                    <div class="js-nav-perf hidden">
+                        <i class="fa-solid fa-gear"></i>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+					<div class="js-nav-popup hidden">
+						<li class="popup-user">
+							<i class="fa-solid fa-user"></i>
+							<span class="js-popup-name"></span>
+						</li>
+						<li class="js-popup-logout">
+							<i class="fa-solid fa-right-from-bracket"></i>
+							Logout
+						</li>
+					</div>
+                    <div class="js-nav-buttons hidden">
+                        <a
+                            class="login-button"
+                            href="/user/login"
+                            type="button"
+                        >
+                            Login
+                        </a>
+                        <a
+                            class="signup-button"
+                            href="/user/signup"
+                            type="button"
+                        >
+                            Signup
+                        </a>
+                    </div>
+                </div>
+            </header>
+            {{ template "content" . }}
+            {{ template "scripts" . }}
+        </body>
+    </html>
+{{ end }}

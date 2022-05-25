@@ -1,0 +1,22 @@
+{{ template "base" . }}
+{{ define "title" }}Todo List - Signup{{ end }}
+{{ define "scripts" }}
+    <script src="/static/js/user-validate.js"></script>
+{{ end }}
+
+{{ define "content" }}
+    <form class="form" action="/user/signup" method="post">
+        <label class="form-user-label">Email:</label>
+        <input class="js-form-user" name="username" />
+        <p class="js-user-error hidden">
+            <i class="fa-solid fa-circle-exclamation"></i> email is not valid
+        </p>
+        <label class="form-pass-label">Password:</label>
+        <input class="js-form-pass" name="password" type="password" />
+        <p class="js-pass-error hidden">
+            <i class="fa-solid fa-circle-exclamation"></i> password is too short
+        </p>
+        <button class="js-form-button" type="submit">Signup</button>
+        <p>Already have an account? <a href="/user/login">Login</a></p>
+    </form>
+{{ end }}

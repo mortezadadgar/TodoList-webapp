@@ -1,0 +1,295 @@
+:root {
+    --color-white: #ffffff;
+    --color-black: #000000;
+    --color-blue: #266dd3;
+	--color-darkblue: #1e57a8;
+    --color-orange: #f24236;
+    --color-green: #6eb257;
+    --color-lightgreen: #00b300;
+    --color-darkgreen: #579343;
+    --color-red: #ff4d4d;
+    --color-darkred: #ff1a1a;
+    --color-lightred: #f24236;
+    --color-lightgray: #cccccc;
+    --color-gray: #808080;
+}
+
+* {
+    box-sizing: border-box;
+    transition: 500ms ease;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    font-size: 0.8em;
+}
+
+button,
+a {
+    cursor: pointer;
+    color: var(--color-black);
+}
+
+input {
+    border-radius: 3px;
+    outline: none;
+    padding: 5px 5px;
+    border: 1px solid var(--color-lightgray);
+}
+
+input:focus {
+    border: 1px solid var(--color-blue);
+}
+
+button {
+    border: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 9px;
+    margin: 0 5px 20px 0px;
+    border-bottom: 1px solid var(--color-lightgray);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+    position: relative;
+}
+
+.title {
+    margin-right: auto;
+}
+
+.title-text {
+    color: var(--color-gray);
+    font-family: "Silkscreen";
+    font-size: 1.1em;
+}
+
+.title-text:hover {
+    color: var(--color-blue);
+}
+
+.searchbox {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.hidden {
+    display: none !important;
+}
+
+.nav-container {
+    margin-left: auto;
+}
+
+.js-nav-perf {
+    border: 1px solid var(--color-lightgray);
+    padding: 5px;
+    border-radius: 3px;
+    display: inline;
+	cursor: pointer;
+    /* NOTE: neighborhood uses display inline which doesn't increase parent by padding*/
+}
+
+.js-nav-perf:hover {
+	background-color: var(--color-lightgray);
+}
+
+.js-nav-popup {
+    padding: 8px;
+    border-radius: 3px;
+    border: 1px solid var(--color-lightgray);
+    position: absolute;
+    right: 0.5rem;
+    top: 3.5rem;
+    list-style: none;
+    line-height: 1.9;
+}
+
+.popup-user {
+	border-bottom: 1px solid var(--color-lightgray);
+}
+
+.js-popup-logout {
+	cursor: pointer;
+}
+
+.fa-chevron-down {
+    margin-left: 3px;
+}
+
+.nav {
+    flex-shrink: 0;
+    margin: 7px 0px;
+}
+
+.signup-button {
+    color: var(--color-white);
+    background-color: var(--color-blue);
+    border: 1px solid var(--color-blue);
+    border-radius: 3px;
+    margin-left: 5px;
+    padding: 8px 15px;
+}
+
+.login-button {
+    color: var(--color-blue);
+    background-color: var(--color-white);
+    border-radius: 3px;
+    border: 1px solid var(--color-blue);
+    padding: 8px 15px;
+}
+
+.login-button:hover,
+.signup-button:hover {
+    box-shadow: 0px 0px 3px var(--color-blue);
+}
+
+#todos {
+    text-align: center;
+}
+
+#todo {
+    display: flex;
+    width: 40%;
+    align-items: center;
+    padding: 10px 8px;
+    margin: 15px auto;
+    border: 1px solid var(--color-lightgray);
+    border-radius: 3px;
+    justify-content: space-between;
+    /* TODO: box-shadow? */
+}
+
+.todo-add {
+    font-size: 1.1em;
+    margin-left: 5px;
+    color: var(--color-blue);
+}
+
+.todo-add:hover {
+	color: var(--color-darkblue);
+}
+
+.todo-check {
+    margin: 0px 10px 0px 10px;
+}
+
+.todo-text {
+    margin-right: auto;
+}
+
+.todo-edit {
+    border-radius: 3px; /* NOTE: same as todo-remove */
+    color: var(--color-green);
+    padding: 3px 7px; /* NOTE: as well */
+}
+
+.todo-edit:hover {
+    color: var(--color-darkgreen);
+}
+
+.todo-remove {
+    border-radius: 3px;
+    color: var(--color-red);
+    padding: 3px 7px;
+}
+
+.todo-remove:hover {
+    color: var(--color-darkred);
+}
+
+.todo-placeholder {
+    opacity: 0.55;
+    text-align: center;
+    margin: 10px auto;
+}
+
+.todo-placeholder a {
+    color: var(--color-white);
+    background-color: var(--color-lightgreen);
+    padding: 3px 8px;
+    margin-left: 2px;
+    border-radius: 3px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 10px;
+    margin: 0px auto;
+    border: 1px solid var(--color-lightgray);
+    width: 23%;
+    border-radius: 3px;
+}
+
+.form p,
+.form label {
+    font-size: 0.9em;
+}
+
+.form-pass-label {
+    margin-top: 10px;
+}
+
+.js-form-pass,
+.js-form-user {
+    display: block;
+    padding: 5px;
+    border: 1px solid var(--color-lightgray);
+    margin-bottom: 10px;
+}
+
+.js-form-button {
+    display: block;
+    width: 100%;
+    padding: 6px;
+    border-radius: 3px;
+    color: var(--color-white);
+    background-color: var(--color-blue);
+    margin: 10px auto;
+}
+
+.js-user-error,
+.js-pass-error {
+    color: var(--color-red);
+    margin-bottom: 5px;
+}
+
+@media (max-width: 490px) {
+    #todo {
+        width: 50%;
+    }
+    .form {
+        width: 60%;
+    }
+    .header .user-menu .signup-button {
+        display: none;
+    }
+}
+
+@media (max-width: 380px) {
+    .header .title {
+        font-size: 0.7em !important;
+    }
+}
+
+.test {
+    background-color: grey;
+}
+
+/* DONE: remove and edit icon inside todo items */
+/* DONE: center todos border */
+/* DONE: redesign signup page */
+/* DONE: font face? */
+/* DONE: globally use font Awesome */
+/* DONE: align searchbox and todo inputbox */
+/* TODO: makes pages looks good on 100% zoom(should we?) */

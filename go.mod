@@ -3,15 +3,12 @@ module TodoList
 go 1.17
 
 require (
-	github.com/alexedwards/scs/v2 v2.5.0 // indirect
-	github.com/go-chi/chi/v5 v5.0.7 // indirect
-	github.com/golang-jwt/jwt v3.2.2+incompatible // indirect
-	github.com/golangcollege/sessions v1.2.0 // indirect
-	github.com/gorilla/securecookie v1.1.1 // indirect
-	github.com/gorilla/sessions v1.2.1 // indirect
-	github.com/jackc/pgx v3.6.2+incompatible // indirect
-	github.com/pkg/errors v0.9.1 // indirect
-	golang.org/x/crypto v0.0.0-20220507011949-2cf3adece122 // indirect
-	golang.org/x/sys v0.0.0-20210615035016-665e8c7367d1 // indirect
-	golang.org/x/text v0.3.7 // indirect
+	github.com/caarlos0/env/v6 v6.9.3
+	github.com/go-chi/chi v1.5.4
+	github.com/golangcollege/sessions v1.2.0
+	github.com/joho/godotenv v1.4.0
+	github.com/lib/pq v1.10.5
+	golang.org/x/crypto v0.0.0-20200317142112-1b76d66859c6
 )
+
+require golang.org/x/sys v0.0.0-20190412213103-97732733099d // indirect

@@ -1,9 +1,0 @@
-{{ template "base" . }}
-{{ define "title" }}Todo List [WIP] - TODO{{ end }}
-
-{{ define "content" }}
-    <form action="/todo/create" method="post">
-        <input type="text" name="body" />
-        <button type="submit">Sumbit</button>
-    </form>
-{{ end }}
